@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Остринка — генератор комиксов</title>
+<style>
+  :root { --bg:#fffdf5; --ink:#1b1b1b; --muted:#6b6b6b; --accent:#f7a600; --accent2:#f25c05; }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width:760px; margin:0 auto; padding:48px 24px 64px; }
+  header { display:flex; align-items:center; gap:18px; margin-bottom:8px; }
+  .logo {
+    width:72px; height:72px; border-radius:18px; flex:none;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    display:flex; align-items:center; justify-content:center; font-size:38px;
+  }
+  h1 { font-size:30px; margin:0; letter-spacing:-.4px; }
+  .sub { color:var(--muted); margin:2px 0 0; }
+  h2 { font-size:19px; margin:40px 0 12px; }
+  ol, ul { padding-left:22px; margin:0; }
+  li { margin:8px 0; }
+  .card {
+    background:#fff; border:1px solid #ececec; border-radius:14px;
+    padding:20px 22px; margin-top:16px;
+  }
+  .muted { color:var(--muted); font-size:14px; }
+  footer { margin-top:48px; padding-top:20px; border-top:1px solid #ececec; }
+  a { color:var(--accent2); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">⚡</div>
+    <div>
+      <h1>Остринка</h1>
+      <p class="sub">Генератор коротких комиксов для сообщества ВКонтакте</p>
+    </div>
+  </header>
+
+  <div class="card">
+    <p style="margin:0">
+      Приложение автоматически создаёт короткие юмористические комиксы
+      и публикует их на стене сообщества
+      <a href="https://vk.com/club239509445">«Остринка»</a>,
+      которым владеет автор приложения. Оно не собирает данные пользователей
+      и работает только с одним сообществом — тем, где установлено.
+    </p>
+  </div>
+
+  <h2>Как это работает</h2>
+  <ol>
+    <li>Выбирается бытовая тема — поход в магазин, соседи, ремонт, готовка.</li>
+    <li>Языковая модель придумывает несколько вариантов шутки из трёх кадров,
+        а отдельная проверка выбирает самый удачный.</li>
+    <li>Генератор изображений рисует комикс, реплики наносятся отдельно,
+        чтобы русский текст всегда был написан правильно.</li>
+    <li>Готовый комикс публикуется на стене сообщества.</li>
+  </ol>
+
+  <h2>Какие данные использует</h2>
+  <ul>
+    <li>Публикует записи на стене одного сообщества — того, которым владеет автор.</li>
+    <li>Загружает собственные сгенерированные изображения для этих записей.</li>
+    <li>Не читает переписку, не собирает и не хранит данные пользователей ВКонтакте.</li>
+  </ul>
+
+  <h2>Кто использует</h2>
+  <p>
+    Личный некоммерческий проект одного автора. Приложение не рассчитано на
+    сторонних пользователей: оно обслуживает только сообщество своего владельца.
+  </p>
+
+  <footer class="muted">
+    Исходный код и техническая документация — по запросу.
+    Связь: через сообщения сообщества «Остринка».
+  </footer>
+
+</div>
+</body>
+</html>
